@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Vendas</title>
+    <style>
+        .topo {
+            background-color: #F5DEB3;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 4px silver;
+            margin-bottom: 10px;
+        }
+
+        .descricao{
+            display: none;
+        }
+
+        .item:hover .descricao{
+            display: block;
+        }
+        label{
+            font-size: 45px;
+            color: #CD853F;
+        }
+
+        td{
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        button{
+            color:white;
+            background-color: #4682B4;
+            border-color: silver;
+            border-radius: 3px;
+            width: 200px;
+            height: 30px;
+        }
+
+        h2{
+            color: #8E9537;
+            text-align: left;
+        }
+        p{
+            color: #8E9537;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="topo">
+        <label>Painel de Vendas</label>
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <img src="tenis nike.jpg">
+                </td>
+                <td>
+                    <img src="tenis puma.jpg">
+                </td>
+                <td>
+                    <img src="tenis adidas.jpg">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <div class="item">
+                        <button>Ver Descrição</button>
+                        <div class="descricao"></div>
+                        <h2>Descrição do Produto</h2>
+                        <p>Preço: R$ 29.529,00</p>
+                        <p>Marca: Nike</p>
+                        <p>Descrição: O Ben & Jerry’s x Nike Dunk SB, em sua parte superior de couro retrata céus azuis e pastagens verdes, enquanto as sobreposições de cabelo de pônei são renderizadas em uma estampa de vaca manchada.</p>
+                        <button onclick="window.open('comprar.html&id=1');">Comprar</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="item">
+                        <button>Ver Descrição</button>
+                        <div class="descricao"></div>
+                        <h2>Descrição do Produto</h2>
+                        <p>Preço: R$ 499,90</p>
+                        <p>Marca: Puma</p>
+                        <p>Descrição: Multiuso, o Tênis Puma X-Ray 2 Square BDB é a escolha certa para quem curti o estilo Puma complementar o visual urbano com modernidade e muito conforto em todos os momentos.</p>
+                        <button onclick="window.open('comprar.html&id=2');">Comprar</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="item">
+                        <button>Ver Descrição</button>
+                        <div class="descricao"></div>
+                        <h2>Descrição do Produto</h2>
+                        <p>Preço: R$ 899,99</p>
+                        <p>Marca: Adidas</p>
+                        <p>Descrição: O Bad Bunny x adidas Forum Buckle Low 'Blue Tint' oferece uma colorway pastel do tênis de argola tradicional. Tons sutis de azul são executados em uma parte superior de baixo perfil construída com uma mistura de couro e camurça.</p>
+                        <button onclick="window.open('comprar.html&id=3');">Comprar</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

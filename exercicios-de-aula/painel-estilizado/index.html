@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      color: #000;
+      font-family: 'Lato', sans-serif;
+    }
+
+    html, body {
+      min-height: 100%;
+      height: auto;
+    }
+
+    body {
+      background-image: linear-gradient(to bottom, #202633 0%, #ccc 100%);
+    }
+
+    .titulo {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #b3b9bf;
+      font-size: 30px;
+      margin: 25px 0;
+    }
+
+    .titulo:hover {
+      color: #2c3f52;
+    }
+
+    #box {
+      width: 880px;
+      height: auto;
+      margin: 15px auto;
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    #box:after {
+      display: block;
+      content: '.';
+      line-height: 0;
+      visibility: hidden;
+    }
+
+    .estilizacao {
+      display: block;
+      width: 880px;
+      list-style: none;
+    }
+
+    .estilizacao li {
+      position: relative;
+      display: block;
+      float: left;
+      width: 400px;
+      height: 300px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .estilizacao li img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 999;
+      position: absolute;
+      transition: .5s;
+    }
+    .conteudo {
+      display: block;
+      width: 100%;
+      height: 100px;
+      background-color: #202636;
+      overflow: hidden;
+      color: white;
+      margin-top: 200px;
+    }
+
+    .estilizacao li:hover img {
+      margin-top: -100px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.403);
+    }
+
+    .conteudo p {
+      display: block;
+      color: white;
+      position: relative;
+      float: left;
+      width: 250px;
+      margin: 10px;
+      margin-bottom: 0;
+      font-family: 'Lato', sans-serif;
+      text-indent: 10px;
+    }
+
+    .bnt-more {
+      display: block;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      float: right;
+      padding: 3px 10px;
+      background-color: #ae2341;
+      border-radius: 4px;
+      margin: 10px;
+    }
+
+    .nome-secao {
+      font-size: 18px;
+    }
+
+    .descricao {
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+  <a href="https://youtube.com/devspace" class="titulo">Dev Space</a>
+  <div id="box">
+    <ul class="estilizacao">
+      <li>
+        <img src="https://tympanus.net/Tutorials/CaptionHoverEffects/images/2.png" alt="">
+        <div class="conteudo">
+          <p class="nome-secao">Músicas</p>
+          <p class="descricao">Melhores músicas</p>
+          <p class="bnt-more">Ver mais</p>
+        </div>
+      </li>
+      <li>
+        <img src="https://tympanus.net/Tutorials/CaptionHoverEffects/images/3.png" alt="">
+        <div class="conteudo">
+          <p class="nome-secao">Imagens</p>
+          <p class="descricao">Melhores imagens</p>
+          <p class="bnt-more">Ver mais</p>
+        </div>
+      </li>
+      <li>
+        <img src="https://tympanus.net/Tutorials/CaptionHoverEffects/images/6.png" alt="">
+        <div class="conteudo">
+          <p class="nome-secao">Aplicativos</p>
+          <p class="descricao">Melhores aplicativos</p>
+          <p class="bnt-more">Ver mais</p>
+        </div>
+      </li>
+      <li>
+        <img src="https://tympanus.net/Tutorials/CaptionHoverEffects/images/4.png" alt="">
+        <div class="conteudo">
+          <p class="nome-secao">Músicas</p>
+          <p class="descricao">Melhores músicas</p>
+          <p class="bnt-more">Ver mais</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

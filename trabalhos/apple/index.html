@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        header {
+            width: 90vw;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0px 50px;
+            background-color: rgba(255, 255, 255, 0.775);
+            backdrop-filter: blur(15px);
+        }
+        
+        header a {
+            color: black;
+            padding: 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: rgb(7, 144, 7);
+            transition: all .1s;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
+        div#principal {
+            padding: 100px 0px;
+            font-size: 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div#principal img {
+            width: 100%;
+        }
+
+        section#produtos {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 100px 0px;
+        }
+
+        div.produtos {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #efefefce;
+            transition: box-shadow .2s;
+        }
+
+        div.produtos:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            color: white;
+            background-color: black;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/apple logo.png" width="50px" style="width: 40px; margin: 10px;">
+        <section id="menu">
+            <a href="#">Loja</a>
+            <a href="#mac">Mac</a>
+            <a href="#apple-watch">Watch</a>
+            <a href="#airpods">AirPods</a>
+            <a href="#iphone-14">Iphone</a>
+        </section>
+    </header>
+
+    <main>
+        <div id="principal">
+            <h1>iPhone 14</h1>
+            <p>Maravilindo.</p>
+            <img src="imagens/iphone-principal.png">
+        </div>
+
+        <section id="produtos">
+            <div id="mac" class="produtos">
+                <div id="produtos-texto">
+                    <h1>MacBook Air</h1>
+                    <p>Espaçoso sem perder a fineza.</p>
+                </div>
+                <img src="imagens/mac book.png" style="width: 100%; mix-blend-mode: multiply;">
+                <a href="https://apple.com/br/">Comprar &rightarrow;</a>
+            </div>
+
+            <div id="apple-watch" class="produtos">
+                <div id="produtos-texto">
+                    <h1>Apple Watch</h1>
+                    <p>Espaçoso sem perder a fineza.</p>
+                </div>
+                <img src="imagens/Apple-Watch.png" style="width: 65%; ">
+                <a href="https://apple.com/br/">Comprar &rightarrow;</a>
+            </div>
+
+            <div id="airpods" class="produtos">
+                <div id="produtos-texto">
+                    <h1>AirPods</h1>
+                    <p>Espaçoso sem perder a fineza.</p>
+                </div>
+                <img src="imagens/air pods.jfif" style="width: 100%; mix-blend-mode: multiply;">
+                <a href="https://apple.com/br/">Comprar &rightarrow;</a>
+            </div>
+
+            <div id="iphone-14" class="produtos">
+                <div id="produtos-texto">
+                    <h1>Iphone 14 Pro</h1>
+                    <p>Espaçoso sem perder a fineza.</p>
+                </div>
+                <img src="imagens/iphone-14.jpg" style="width: 65%; mix-blend-mode: multiply;">
+                <a href="https://apple.com/br/">Comprar &rightarrow;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h4>&copy;Copyright 2023</h4>
+    </footer>
+</body>
+</html>

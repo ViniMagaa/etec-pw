@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: url(bomba.gif);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    backdrop-filter: grayscale(100%);
+}
+
+header {
+    margin: auto;
+    width: 100vw;
+    height: 150px;
+    text-align: center;
+}
+
+header > h1 {
+    font-size: 5em;
+    color: rgb(255, 68, 0);
+}
+
+header > p {
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 7px white;
+}
+
+main {
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+main p {
+    text-align: justify;
+    margin: 10px;
+}

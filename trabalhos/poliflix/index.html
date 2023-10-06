@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Poliflix</title>
+    <style>
+        td img:hover {
+            margin-top: -4px;
+            box-shadow: 5px 4px 3px white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .meuCarrossel {
+            margin: auto;
+            height: 500px;
+            width: 1000px;
+            overflow: hidden;
+        }
+
+        .carrossel-inner {
+            width: 400%;
+            height: 100%;
+            animation-name: animacao;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+        }
+
+        .item-active img {
+            width: 24.9%;
+            height: 100%;
+        }
+
+        .item-active {
+            display: inline;
+        }
+
+        @keyframes animacao {
+            0% {
+                margin-left: 0;
+            }
+
+            20% {
+                margin-left: 0;
+            }
+
+            25% {
+                margin-left: -100%;
+            }
+            
+            45% {
+                margin-left: -100%;
+            }
+
+            50% {
+                margin-left: -200%;
+            }
+
+            70% {
+                margin-left: -200%;
+            }
+
+            75% {
+                margin-left: -300%;
+            }
+
+            95% {
+                margin-left: -300%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="meuCarrossel" data-ride="carousel">
+            <div class="carrossel-inner">
+
+                <div class="item-active">
+                    <img src="carrossel/banner1.jpg">
+                </div>
+                
+                <div class="item-active">
+                    <img src="carrossel/banner2.jpg">
+                </div>
+
+                <div class="item-active">
+                    <img src="carrossel/banner3.jpg">
+                </div>
+
+                <div class="item-active">
+                    <img src="carrossel/banner4.jpg">
+                </div>
+
+            </div>
+        </div>
+
+        <center>
+            <hr>
+            <font color="white">
+                <h1>POLIFLIX FILMES</h1>
+            </font>
+            <hr>
+
+            <font color="white">
+                <h2>ESTREIAS DA SEMANA</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="filmes/mario.html"><img src="filmes/img/mario.jpg" width="200px" height="300px"></a>
+                            <br>
+                            <small>The Super Mario Bros</small>
+                        </td>
+
+                        <td>
+                            <a href="filmes/demon-slayer.html"><img src="filmes/img/demon-slayer.jpg" width="200px" height="300px"></a>
+                            <br>
+                            <small>Demon Slayer</small>
+                        </td>
+
+                        <td>
+                            <a href="filmes/pantera-negra.html"><img src="filmes/img/pantera.jpg" width="200px" height="300px"></a>
+                            <br>
+                            <small>Pantera Negra: Wakanda Para Sempre</small>
+                        </td>
+
+                        <td>
+                            <a href="filmes/aranha.html"><img src="filmes/img/aranha.jpg" width="200px" height="300px"></a>
+                            <br>
+                            <small>Homem-Aranha: Sem Volta Para Casa</small>
+                        </td>
+
+                        <td>
+                            <a href="filmes/1917.html"><img src="filmes/img/1917.jpg" width="200px" height="300px"></a>
+                            <br>
+                            <small>1917</small>
+                        </td>
+
+                        <td>
+                            <a href="filmes/hamburguer.html"><img src="filmes/img/hamburguer.jpg" width="200px" height="300px"></a>
+                            <br>
+                            <small>Tá Chovendo Hamburguer 2</small>
+                        </td>
+
+                    </tr>
+                </table>
+            </font>
+        </center>
+    </div>
+        
+</body>
+</html>

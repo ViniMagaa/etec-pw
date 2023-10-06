@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+td img {
+    margin: 10px;
+}
+
+p {
+    max-width: 800px;
+    text-align: justify;
+    margin: auto;
+    text-indent: 10px;
+    margin: 30px;
+}
+
+a img:hover {
+    filter: brightness(60%);
+}

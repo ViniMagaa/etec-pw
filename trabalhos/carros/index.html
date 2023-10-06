@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Frames</title>
+    <style>
+    </style>
+</head>
+<frameset rows="15%,80%,5%" border="0">
+    <frame name="top" src="html/top_frame.html" noresize/>
+        <frameset cols="15%, 85%">
+            <frame name="esquerda" src="html/html/esquerda.html" noresize/>
+            <frame name="principal" src="html/html/principal.html" noresize/>
+        </frameset>
+    <frame name="bottom" src="html/bottom_frame.html" noresize/>
+    <noframes>
+    <body>
+        Your browser does not support frames.
+    </body>
+    </noframes>
+</frameset>
+</html>
