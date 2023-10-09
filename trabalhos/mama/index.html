@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <title>Outubro Rosa 2023</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="CSS/estilos.css">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/botstrap.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script>
+    function jumpto(ancora) {
+      window.location.href = "#" + ancora
+    }
+  </script>
 </head>
+
 <body>
-  
+  <img src="img/fundo.png" alt="topo">
+  <div class="faixa">
+    <p class="textobanner">Campanha Outubro Rosa 2023
+      <input type="button" value="Informe-se" class="btn" onclick="jumpto('informese')">
+      <input type="button" value="Ame-se" class="btn" onclick="jumpto('amese')">
+      <input type="button" value="Previna-se" class="btn" onclick="jumpto('previnase')">
+    </p>
+  </div>
+
+  <br>
+
+  <a name="saibamais"><label>Saiba mais</label></a>
+  <br>
+  <hr>
+  <iframe width="640" height="360" src="https://youtube.com/embed/vbVb1l-dAdQ" frameborder="0" allowfullscreen></iframe>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a name="previnase"><label>Previna-se</label></a>
+  <br>
+  <hr>
+  <iframe width="640" height="360" src="https://youtube.com/embed/-Dxv_YmCUts" frameborder="0" allowfullscreen></iframe>
+  <br>
+  <br>
+  <br>
+  <a name="amese">Ame-se</a>
+  <br>
+  <hr>
+  <img src="img/img3.jpg" alt="imagem">
+  <br>
+  <hr>
+  <a name="informese"><label>Informe-se</label></a>
+  <br>
+  <hr>
+  <img src="img/img1.jpg" alt="imagem">
+  <br>
+  <center>
+    <div class="rolagem">
+      <table class="span19">
+        <tr>
+          <td>
+            <font size="4px">
+              O câncer de mama é um tumor maligno que se desenvolve nos seios. Todo o câncer é caracterizado por um
+              crescimento rápido e desordenado de células.
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td align="justify">
+            <font>
+              Quando as células adquirem características anormais, células dos lobos mamários, células produtoras de
+              leite ou dos
+              ductos por onde é drenado o leite, podem causar uma ou mais mutações no material genético da célula. Esta
+              doença
+              acontece quase exclusivamente em mulheres, porém existem casos de homens com câncer de mama também.
+            </font>
+          </td>
+        </tr>
+        <tr>
+          <td align="justify">
+            Algumas mutações possuem a capacidade de fazer com que uma célula apenas se divida, mas não tenha a
+            capacidade de
+            invadir outros tecidos, estas são chamadas de tumores benignos ou não cancerosos.
+          </td>
+        </tr>
+        <tr>
+          <td align="justify">
+            Para uma célula ser considerada cancerígena é necessário que ocorram mutações no material genético de uma ou
+            mais
+            células e estas adquiram a capacidade não só de se dividir, mas também de evitar a morte celular. Este seria
+            o ciclo
+            normal de vida de qualquer célula do organismo, contudo quando elas invadem os tecidos adjacentes, a doença
+            se instala.
+          </td>
+        </tr>
+        <tr>
+          <td align="justify">
+            É necessário ficar atenta aos sintomas, fazer o check-up anual para os exames preventivos e fazer o
+            tratamento assim que a doença fir descoberta.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </center>
+  <hr>
+  <br>
+  <label>Sintomas do câncer de mama</label>
+  <br>
+  <br>
+  <a href="#" onclick="document.getElementById('pop').style.display='block';">
+    <div class="borda" id="flutuante">
+      <p class="cadastre">
+        Cadastre-se
+      </p>
+      <br>
+      <label id="labelmenor">Receba informações no seu email</label>
+    </div>
+  </a>
+  <br>
+  <div id="pop">
+    <a href="#" onclick="document.getElementById('pop').style.display='none';">[Fechar]</a>
+    <br>
+    <center>
+      <input type="text" placeholder="Digite seu nome" name="nome">
+      <br>
+      <input type="text" placeholder="Digite seu email" name="email">
+      <br>
+      <input type="text" placeholder="Confirme seu email" name="confirme">
+      <br>
+      <input type="button" value="Cadastrar" class="btn2" onclick="#">
+    </center>
+  </div>
 </body>
 </html>
