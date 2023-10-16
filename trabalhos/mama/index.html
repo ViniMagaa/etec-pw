@@ -17,13 +17,14 @@
 </head>
 
 <body>
-  <img src="img/fundo.png" alt="topo">
+  <img src="img/fundo.png" class="topo">
   <div class="faixa">
-    <p class="textobanner">Campanha Outubro Rosa 2023
-      <input type="button" value="Informe-se" class="btn" onclick="jumpto('informese')">
-      <input type="button" value="Ame-se" class="btn" onclick="jumpto('amese')">
-      <input type="button" value="Previna-se" class="btn" onclick="jumpto('previnase')">
+    <p class="textobanner">
+      Campanha Outubro Rosa 2023
     </p>
+    <input type="button" value="Informe-se" class="btn" onclick="jumpto('informese')">
+    <input type="button" value="Ame-se" class="btn" onclick="jumpto('amese')">
+    <input type="button" value="Previna-se" class="btn" onclick="jumpto('previnase')">
   </div>
 
   <br>
@@ -43,16 +44,16 @@
   <br>
   <br>
   <br>
-  <a name="amese">Ame-se</a>
+  <a name="amese"><label>Ame-se</label></a>
   <br>
   <hr>
-  <img src="img/img3.jpg" alt="imagem">
+  <img src="img/img3.jpg" class="imagem">
   <br>
   <hr>
   <a name="informese"><label>Informe-se</label></a>
   <br>
   <hr>
-  <img src="img/img1.jpg" alt="imagem">
+  <img src="img/img1.jpg" class="imagem">
   <br>
   <center>
     <div class="rolagem">
@@ -67,7 +68,7 @@
         </tr>
         <tr>
           <td align="justify">
-            <font>
+            <font size="4px">
               Quando as células adquirem características anormais, células dos lobos mamários, células produtoras de
               leite ou dos
               ductos por onde é drenado o leite, podem causar uma ou mais mutações no material genético da célula. Esta
@@ -78,25 +79,31 @@
         </tr>
         <tr>
           <td align="justify">
-            Algumas mutações possuem a capacidade de fazer com que uma célula apenas se divida, mas não tenha a
-            capacidade de
-            invadir outros tecidos, estas são chamadas de tumores benignos ou não cancerosos.
+            <font size="4px">
+              Algumas mutações possuem a capacidade de fazer com que uma célula apenas se divida, mas não tenha a
+              capacidade de
+              invadir outros tecidos, estas são chamadas de tumores benignos ou não cancerosos.
+            </font>
           </td>
         </tr>
         <tr>
           <td align="justify">
-            Para uma célula ser considerada cancerígena é necessário que ocorram mutações no material genético de uma ou
-            mais
-            células e estas adquiram a capacidade não só de se dividir, mas também de evitar a morte celular. Este seria
-            o ciclo
-            normal de vida de qualquer célula do organismo, contudo quando elas invadem os tecidos adjacentes, a doença
-            se instala.
+            <font size="4px">
+              Para uma célula ser considerada cancerígena é necessário que ocorram mutações no material genético de uma ou
+              mais
+              células e estas adquiram a capacidade não só de se dividir, mas também de evitar a morte celular. Este seria
+              o ciclo
+              normal de vida de qualquer célula do organismo, contudo quando elas invadem os tecidos adjacentes, a doença
+              se instala.
+            </font>
           </td>
         </tr>
         <tr>
           <td align="justify">
-            É necessário ficar atenta aos sintomas, fazer o check-up anual para os exames preventivos e fazer o
-            tratamento assim que a doença fir descoberta.
+            <font size="4px">
+              É necessário ficar atenta aos sintomas, fazer o check-up anual para os exames preventivos e fazer o
+              tratamento assim que a doença fir descoberta.
+            </font>
           </td>
         </tr>
       </table>
@@ -106,12 +113,22 @@
   <br>
   <label>Sintomas do câncer de mama</label>
   <br>
+  <hr>
+  <div class="lista-sintomas">
+    <ul>
+      <li>Desconfortos</li>
+      <li>Mamilo dolorido</li>
+      <li>Nódulos ou secreção mamilar sanguinolenta</li>
+      <li>Fadiga</li>
+      <li>Inchaços dos gânglios</li>
+      <li>Perda de peso</li>
+    </ul>
+  </div>
+  <br>
   <br>
   <a href="#" onclick="document.getElementById('pop').style.display='block';">
     <div class="borda" id="flutuante">
-      <p class="cadastre">
-        Cadastre-se
-      </p>
+      <p class="cadastre">Cadastre-se</p>
       <br>
       <label id="labelmenor">Receba informações no seu email</label>
     </div>
@@ -127,7 +144,7 @@
       <br>
       <input type="text" placeholder="Confirme seu email" name="confirme">
       <br>
-      <input type="button" value="Cadastrar" class="btn2" onclick="#">
+      <input type="button" value="Cadastrar" class="btn2" onclick="">
     </center>
   </div>
 </body>
