@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+    <style>
+      .custom-tooltip {
+        --bs-tooltip-bg: var(--bd-violet-bg);
+        --bs-tooltip-color: var(--bs-white);
+      }
+  </style>
+  </head>
+  <body class="p-4">
+    <h1>Aprendendo o uso do JavaScript no Bootstrap</h1>
+
+    <div class="mb-3 w-100">
+      <h2>Tooltips</h2>
+      <button type="button" class="btn btn-secondary"
+        data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="Tooltip legal">
+        Coloque o mouse aqui!
+      </button>
+    </div>
+
+    <div class="mb-3">
+      <h2>Toast</h2>
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Show live
+        toast</button>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+          aria-atomic="true">
+          <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"
+              aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3 d-flex flex-row">
+        <div class="card">
+          <img src="https://placekitten.com/320/180" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card
+              title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" aria-hidden="true">
+          <img src="https://placekitten.com/320/180" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a class="btn btn-primary disabled placeholder col-6"
+              aria-disabled="true"></a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Sombras</h2>
+        <div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">No shadow</div>
+        <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">Small shadow</div>
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">Regular shadow</div>
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">Larger shadow</div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    const toastTrigger = document.getElementById('liveToastBtn');
+    const toastLiveExample = document.getElementById('liveToast');
+
+    if (toastTrigger) {
+      const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+      toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show();
+      });
+    }
+  </script>
+  </body>
+</html>
