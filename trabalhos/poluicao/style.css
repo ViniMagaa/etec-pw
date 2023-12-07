@@ -1,0 +1,63 @@
+#causas,
+#efeitos,
+#solucoes {
+  display: none;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #caecf1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+footer {
+  background-color: #0A2E36;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+h1 {
+  margin: 0;
+}
+
+select {
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#principal {
+  padding: 1rem 2rem;
+}
+
+#bemvindo {
+  font-size: 1.3rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+a {
+  background: linear-gradient(to right, #0B6E4F, #2e841a);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position-y: bottom;
+  color: #14CC60;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  background-size: 100% 2px;  
+}
