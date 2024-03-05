@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--black-0: #090909;
+	--black-1: #181818;
+	--black-2: #242424;
+	--primary-blue: #232db1;
+}
+
+body {
+	background-color: var(--black-1);
+	color: white;
+	font-family: "Inter", sans-serif;
+	width: 100%;
+	height: 100vh;
+}
+
+main {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	padding: 1.5rem;
+	background-color: var(--black-1);
+	border-radius: 1rem;
+	box-shadow: 4px 4px 1rem var(--black-0), -4px -4px 1rem var(--black-2);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.card form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.card form > div {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.card form > div input {
+	font-size: 1rem;
+	padding: 0.5rem;
+	background-color: var(--black-2);
+	color: white;
+	border: none;
+	border-radius: 0.6rem;
+	outline: 0 solid var(--primary-blue);
+	transition: outline 80ms;
+}
+
+.card form > div input:focus {
+	outline: 2px solid var(--primary-blue);
+}
+
+.card form button {
+	padding: 0.5rem;
+	background-color: var(--primary-blue);
+	border-radius: 0.6rem;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	letter-spacing: 1px;
+	transition: letter-spacing 0.2s, opacity 0.2s;
+}
+
+.card form button:hover {
+	letter-spacing: 2px;
+	filter: opacity(80%);
+}
+
+.card form button:focus {
+	outline: 2px solid #b47311;
+}

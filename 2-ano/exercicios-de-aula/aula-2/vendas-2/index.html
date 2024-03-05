@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulário de Vendas</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="card">
+				<h1>Cadastrar produto</h1>
+				<form name="form1" action="vendas.php" method="post">
+					<div>
+						<label for="product">Produto</label>
+						<input
+							type="text"
+							name="product"
+							id="product"
+							placeholder="Digite o nome do produto"
+						/>
+					</div>
+					<div>
+						<label for="price">Preço</label>
+						<input
+							type="number"
+							name="price"
+							id="price"
+							step="0.1"
+							min="0"
+							placeholder="Valor unitário"
+						/>
+					</div>
+					<div>
+						<label for="quantity">Quantidade</label>
+						<input
+							type="number"
+							id="quantity"
+							name="quantity"
+							min="1"
+							placeholder="Quantos produtos"
+						/>
+					</div>
+					<button type="submit">Comprar</button>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
