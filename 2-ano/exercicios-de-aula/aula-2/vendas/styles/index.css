@@ -1,0 +1,16 @@
+.card {
+	width: clamp(350px, 450px, 100%);
+}
+
+.card form button[type="submit"] {
+	background-color: var(--primary-blue);
+}
+
+.card form button[type="submit"]:not([disabled]):hover {
+	letter-spacing: 2px;
+	filter: opacity(80%);
+}
+
+.card form button[type="submit"]:focus {
+	outline: 2px solid #b47311;
+}

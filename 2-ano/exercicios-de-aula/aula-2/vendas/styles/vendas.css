@@ -1,0 +1,33 @@
+h3.green {
+	color: var(--primary-green);
+}
+
+.card {
+	width: clamp(350px, 650px, 100%);
+}
+
+.card form .information {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#pix-container #copy-pix-key-button[disabled] {
+	filter: opacity(70%);
+}
+
+#pix-container small {
+	opacity: 0.5;
+}
+
+.card form button[type="submit"] {
+	background-color: var(--primary-green);
+}
+
+.card form button[type="submit"]:not([disabled]):hover {
+	letter-spacing: 2px;
+	filter: opacity(80%);
+}
+
+.card form button[type="submit"]:focus {
+	outline: 2px solid #b47311;
+}

@@ -4,23 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Formulário de Vendas</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="styles/global.css" />
+		<link rel="stylesheet" href="styles/index.css" />
+		<script src="js/index.js" defer></script>
 	</head>
 	<body>
 		<main>
 			<div class="card">
-				<h1>Cadastrar produto</h1>
+				<h1>Comprar produto</h1>
 				<form name="form1" action="vendas.php" method="post">
-					<div>
+					<div class="field-container">
 						<label for="product">Produto</label>
 						<input
 							type="text"
 							name="product"
 							id="product"
 							placeholder="Digite o nome do produto"
+							oninput="onChangeProduct()"
 						/>
+						<span id="product-error" class="error">
+							Preencha o nome do produto
+						</span>
 					</div>
-					<div>
+					<div class="field-container">
 						<label for="price">Preço</label>
 						<input
 							type="number"
@@ -29,9 +35,11 @@
 							step="0.1"
 							min="0"
 							placeholder="Valor unitário"
+							oninput="onChangePrice()"
 						/>
+						<span id="price-error" class="error">Digite um valor válido</span>
 					</div>
-					<div>
+					<div class="field-container">
 						<label for="quantity">Quantidade</label>
 						<input
 							type="number"
@@ -39,9 +47,11 @@
 							name="quantity"
 							min="1"
 							placeholder="Quantos produtos"
+							oninput="onChangeQuantity()"
 						/>
+						<span id="quantity-error" class="error">Informe a quantidade</span>
 					</div>
-					<button type="submit">Comprar</button>
+					<button type="submit" id="submit" disabled>Comprar</button>
 				</form>
 			</div>
 		</main>

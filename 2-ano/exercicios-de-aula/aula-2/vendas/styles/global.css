@@ -11,21 +11,49 @@
 	--black-1: #181818;
 	--black-2: #242424;
 	--primary-blue: #232db1;
+	--primary-red: #e33333;
+	--primary-green: #57be24;
 }
 
 body {
-	background-color: var(--black-1);
+	background: linear-gradient(
+		to top left,
+		var(--black-0),
+		var(--black-1),
+		var(--black-2)
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 	font-family: "Inter", sans-serif;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 main {
+	width: 100%;
 	height: 100%;
+	padding: 5rem 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+
+h1 {
+	text-align: center;
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+span.error {
+	display: none;
+	font-size: 0.8rem;
+	color: var(--primary-red);
 }
 
 .card {
@@ -44,13 +72,13 @@ main {
 	gap: 1rem;
 }
 
-.card form > div {
+.card form .field-container {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 }
 
-.card form > div input {
+.card form div input {
 	font-size: 1rem;
 	padding: 0.5rem;
 	background-color: var(--black-2);
@@ -61,30 +89,33 @@ main {
 	transition: outline 80ms;
 }
 
-.card form > div input:focus {
+.card form div input:not([type="radio"]):focus {
 	outline: 2px solid var(--primary-blue);
 }
 
-.card form button {
+.card form button[type="submit"] {
 	padding: 0.5rem;
-	background-color: var(--primary-blue);
 	border-radius: 0.6rem;
 	color: white;
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	border: none;
-	outline: none;
-	cursor: pointer;
 	letter-spacing: 1px;
 	transition: letter-spacing 0.2s, opacity 0.2s;
 }
 
-.card form button:hover {
-	letter-spacing: 2px;
-	filter: opacity(80%);
+.card form button[type="submit"][disabled] {
+	filter: opacity(70%);
+	cursor: not-allowed;
 }
 
-.card form button:focus {
-	outline: 2px solid #b47311;
+button.small {
+	padding: 0.2rem 0.4rem;
+	background-color: var(--primary-blue);
+	color: white;
+	border-radius: 0.4rem;
+}
+
+button.small:hover {
+	filter: opacity(80%);
 }
