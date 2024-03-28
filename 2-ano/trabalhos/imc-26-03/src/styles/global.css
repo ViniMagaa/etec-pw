@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--white: rgb(251, 251, 251);
+	--gray: rgb(204, 204, 204);
+	--dark-gray: rgb(105, 105, 105);
+	--blue: rgb(13, 99, 170);
+	--light-blue: rgb(116, 239, 255);
+	--green: rgb(18, 128, 86);
+	--light-green: rgb(116, 255, 146);
+	--purple: rgb(177, 52, 235);
+	--light-purple: rgb(198, 178, 255);
+	--red: rgb(235, 52, 52);
+	--light-red: rgb(255, 178, 178);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #fefefe;
+}
+
+button {
+	--primary-color: linear-gradient(
+		to bottom right,
+		var(--light-blue),
+		var(--blue)
+	);
+	--secondary-color: linear-gradient(
+		to bottom right,
+		var(--light-green),
+		var(--green)
+	);
+	flex: 1;
+	padding: 0.5rem 0.8rem;
+	outline: none;
+	border: none;
+	border-radius: 0.25rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	background: var(--primary-color);
+	color: var(--white);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+button:hover:not([disabled]) {
+	box-shadow: 0 0 1rem rgba(37, 65, 111, 0.2);
+	background: var(--secondary-color);
+	letter-spacing: 1px;
+}
+
+button[disabled] {
+	--primary-color: linear-gradient(
+		to bottom right,
+		var(--gray),
+		var(--dark-gray)
+	);
+	filter: opacity(80%);
+	cursor: not-allowed;
+}
+
+button.secondary {
+	--primary-color: linear-gradient(
+		to bottom right,
+		var(--light-purple),
+		var(--purple)
+	);
+	--secondary-color: linear-gradient(
+		to bottom right,
+		var(--light-red),
+		var(--red)
+	);
+}
+
+.card {
+	--max-size: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1.5rem;
+	width: clamp(300px, var(--max-size), 100%);
+	border-radius: 1rem;
+	background: var(--white);
+	box-shadow: 0 0 5rem #25416f3f;
+}
+
+.error {
+	color: var(--red);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+footer {
+	padding: 0.8rem;
+	color: var(--dark-gray);
+	text-align: center;
+	font-size: clamp(0.6rem, 2vw, 1rem);
+}

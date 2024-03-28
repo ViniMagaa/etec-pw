@@ -1,0 +1,64 @@
+header {
+	padding-top: clamp(2rem, 15vw, 5rem);
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 0 0 10vw 10vw;
+	overflow: hidden;
+}
+
+header .title {
+	padding: 0 1rem;
+	max-width: 650px;
+	text-align: center;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -35%);
+}
+
+main form {
+	font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+}
+
+main form label {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+main form label p small {
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+}
+
+main form label input {
+	flex: 1;
+	outline: none;
+	border: 1px solid var(--gray);
+	border-radius: 0.25rem;
+	padding: 0.5rem 0.8rem;
+	transition: 0.15s outline;
+}
+
+main form label input:focus {
+	outline: 3px solid var(--light-blue);
+}
+
+main form .buttons-container {
+	display: flex;
+	gap: 0.5rem;
+}
