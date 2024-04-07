@@ -1,5 +1,5 @@
 header {
-	padding-top: clamp(2rem, 15vw, 5rem);
+	padding-top: clamp(5rem, 15vw, 6rem);
 	height: 450px;
 	display: flex;
 	flex-direction: column;
@@ -11,13 +11,60 @@ header {
 	overflow: hidden;
 }
 
-header .title {
+header h1 {
+	font-size: 3rem;
 	padding: 0 1rem;
 	max-width: 650px;
 	text-align: center;
 }
 
-header .title h1 {
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+}
+
+main .card {
+	--max-size: 500px;
+	gap: 0.5rem;
+}
+
+main .card .recommendation {
+	text-align: center;
+	color: var(--blue);
+	font-style: italic;
+	font-weight: 600;
+}
+
+main .card .information {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+
+main .card .information #button-toggle-table-visible {
+	flex: 0 1 150px;
+}
+
+main .card .header {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main .card .header .title {
+	text-align: center;
+}
+
+main .card .header .title h2 {
 	margin-top: -1.8rem;
 	font-size: clamp(4rem, 20vw, 6rem);
 	font-weight: 900;
@@ -35,27 +82,19 @@ header .title h1 {
 	-webkit-text-fill-color: transparent;
 }
 
-main {
+main .table-container {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -40%);
-}
-
-main .card {
-	--max-size: 600px;
+	overflow: auto;
 }
 
 main table {
-	border: 2px solid black;
+	width: clamp(430px, 100%, 500px);
+	margin: auto;
+	border: 1px solid var(--gray);
 	border-collapse: collapse;
 	border-radius: 0.8rem;
 	overflow: hidden;
+	font-size: 0.9rem;
 }
 
 main table tr:nth-child(odd) {
@@ -90,8 +129,8 @@ main .card a {
 main .card a::after {
 	content: "";
 	display: block;
-	width: 100%;
-	height: 2px;
+	width: 0;
+	height: 1.5px;
 	background-color: var(--blue);
 	transition: width 0.2s ease;
 }
@@ -102,5 +141,11 @@ main .card a:hover {
 
 main .card a:hover::after {
 	background-color: var(--purple);
-	width: 0;
+	width: 100%;
+}
+
+@media (max-width: 560px) {
+	main .card .header img:last-child {
+		display: none;
+	}
 }

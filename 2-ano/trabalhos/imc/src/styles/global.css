@@ -54,7 +54,7 @@ button {
 }
 
 button:hover:not([disabled]) {
-	box-shadow: 0 0 1rem rgba(37, 65, 111, 0.2);
+	box-shadow: 0 0 1rem rgba(37, 65, 111, 0.05);
 	background: var(--secondary-color);
 	letter-spacing: 1px;
 }
@@ -83,7 +83,7 @@ button.secondary {
 }
 
 .card {
-	--max-size: 500px;
+	--max-size: 600px;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -96,7 +96,7 @@ button.secondary {
 
 .error {
 	color: var(--red);
-	font-size: 0.8rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 }
 
