@@ -1,0 +1,35 @@
+.not-important {
+	filter: opacity(50%);
+	font-weight: 600;
+	font-style: italic;
+}
+
+a.link,
+a.link::before {
+	background: linear-gradient(
+		to right,
+		var(--secondary-blue),
+		var(--secondary-green)
+	);
+}
+
+a.link {
+	width: fit-content;
+	background-clip: text;
+	color: transparent;
+	position: relative;
+}
+
+a.link::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 1px;
+	width: 0;
+	transition: width 0.2s;
+}
+
+a.link:hover::before {
+	width: 100%;
+}

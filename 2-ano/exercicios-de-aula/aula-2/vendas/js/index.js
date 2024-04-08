@@ -1,29 +1,32 @@
 function isFormValid() {
-	return form.product().value && form.price().value && form.quantity().value;
+	return (
+		form.product().value &&
+		Number(form.price().value) &&
+		Number(form.quantity().value)
+	);
 }
 
 function toggleButtonDisabled() {
 	form.submit().disabled = !isFormValid();
 }
 
-function toggleError(field, filedError) {
-	const { value } = field;
-	filedError.style.display = !value ? "block" : "none";
+function toggleError(condition, filedError) {
+	filedError.style.display = condition ? "none" : "block";
 }
 
 function onChangeProduct() {
 	toggleButtonDisabled();
-	toggleError(form.product(), form.productError());
+	toggleError(form.product().value, form.productError());
 }
 
 function onChangePrice() {
 	toggleButtonDisabled();
-	toggleError(form.price(), form.priceError());
+	toggleError(Number(form.price().value), form.priceError());
 }
 
 function onChangeQuantity() {
 	toggleButtonDisabled();
-	toggleError(form.quantity(), form.quantityError());
+	toggleError(Number(form.quantity().value), form.quantityError());
 }
 
 const form = {

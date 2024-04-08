@@ -1,6 +1,6 @@
 const form = {
 	paymentType: () =>
-		document.querySelector("input[name='paymentType']:checked"),
+		document.querySelector("input[name='payment-type']:checked"),
 	creditCard: {
 		container: () => document.getElementById("credit-card-container"),
 		fields: {
@@ -13,17 +13,8 @@ const form = {
 				document.getElementById("credit-card-expire-date-error"),
 		},
 	},
-	debitCard: {
-		container: () => document.getElementById("debit-card-container"),
-		fields: {
-			number: () => document.getElementById("debit-card-number"),
-			numberError: () => document.getElementById("debit-card-number-error"),
-			code: () => document.getElementById("debit-card-code"),
-			codeError: () => document.getElementById("debit-card-code-error"),
-			expireDate: () => document.getElementById("debit-card-expire-date"),
-			expireDateError: () =>
-				document.getElementById("debit-card-expire-date-error"),
-		},
+	money: {
+		container: () => document.getElementById("money-container"),
 	},
 	pix: {
 		container: () => document.getElementById("pix-container"),
@@ -45,30 +36,21 @@ function isFormValid() {
 
 		if (!creditFields.expireDate().value) return false;
 		if (new Date(creditFields.expireDate().value) < new Date()) return false;
-	} else if (paymentType === "debit-card") {
-		const { fields: debitFields } = form.debitCard;
-		if (!debitFields.number().value) return false;
-		if (debitFields.number().value.length !== 19) return false;
-
-		if (!debitFields.code().value) return false;
-		if (debitFields.code().value.length !== 3) return false;
-
-		if (!debitFields.expireDate().value) return false;
-		if (new Date(debitFields.expireDate().value) < new Date()) return false;
+	} else if (paymentType === "pix") {
+		return false;
 	}
 
 	return true;
 }
 
 function toggleButtonDisabled() {
-	console.log(isFormValid());
 	form.submit().disabled = !isFormValid();
 }
 
 // Display handlers
 function hidePaymentTypeContainers() {
 	form.creditCard.container().style.display = "none";
-	form.debitCard.container().style.display = "none";
+	form.money.container().style.display = "none";
 	form.pix.container().style.display = "none";
 }
 
@@ -81,13 +63,14 @@ function handleSelectingPaymentType() {
 
 	const validPaymentTypes = {
 		"credit-card": form.creditCard,
-		"debit-card": form.debitCard,
+		money: form.money,
 		pix: form.pix,
 	};
 
 	showPaymentTypeContainer(
 		validPaymentTypes[form.paymentType().id].container()
 	);
+	toggleButtonDisabled();
 }
 
 // Helpers
@@ -156,43 +139,11 @@ function onChangeCreditCardExpireDate() {
 	);
 }
 
-function onChangeDebitCardNumber() {
-	const { number, numberError } = form.debitCard.fields;
-
-	toggleButtonDisabled();
-	toggleError(
-		getNumbersFromString(number().value).length === 16,
-		numberError(),
-		"Informe os 16 dígitos"
-	);
-
-	number().value = formatCardNumber(number().value);
-}
-
-function onChangeDebitCardCode() {
-	const { code, codeError } = form.debitCard.fields;
-
-	toggleButtonDisabled();
-	code().value = getNumbersFromString(code().value);
-	toggleError(code().value.length === 3, codeError(), "Preencha os 3 dígitos");
-}
-
-function onChangeDebitCardExpireDate() {
-	const { expireDate, expireDateError } = form.debitCard.fields;
-
-	toggleButtonDisabled();
-	toggleError(
-		new Date(expireDate().value) > new Date(),
-		expireDateError(),
-		"A data deve ser no futuro"
-	);
-}
-
 // Others
 function copyPixKey() {
 	const button = form.pix.copyButton();
 
-	navigator.clipboard.writeText("vinisantos2008vs@gmail.com");
+	navigator.clipboard.writeText("36cac6fc-1738-4568-9f8a-ffcbb74715fb");
 	button.disabled = true;
 	button.innerText = "Copiado!";
 	button.style.backgroundColor = "var(--primary-green)";

@@ -11,8 +11,10 @@
 	--black-1: #181818;
 	--black-2: #242424;
 	--primary-blue: #232db1;
+	--secondary-blue: #23acb1;
 	--primary-red: #e33333;
 	--primary-green: #57be24;
+	--secondary-green: #24be64;
 }
 
 body {
@@ -78,6 +80,12 @@ span.error {
 	gap: 0.5rem;
 }
 
+.card form .field-container label:has(+ input[required])::after {
+	content: "*";
+	margin-left: 0.25rem;
+	color: var(--primary-red);
+}
+
 .card form div input {
 	font-size: 1rem;
 	padding: 0.5rem;
@@ -118,4 +126,8 @@ button.small {
 
 button.small:hover {
 	filter: opacity(80%);
+}
+
+.green {
+	color: var(--primary-green);
 }

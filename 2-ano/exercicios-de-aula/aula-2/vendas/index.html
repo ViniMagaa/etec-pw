@@ -21,6 +21,7 @@
 							id="product"
 							placeholder="Digite o nome do produto"
 							oninput="onChangeProduct()"
+							required
 						/>
 						<span id="product-error" class="error">
 							Preencha o nome do produto
@@ -36,6 +37,7 @@
 							min="0"
 							placeholder="Valor unitário"
 							oninput="onChangePrice()"
+							required
 						/>
 						<span id="price-error" class="error">Digite um valor válido</span>
 					</div>
@@ -48,10 +50,11 @@
 							min="1"
 							placeholder="Quantos produtos"
 							oninput="onChangeQuantity()"
+							required
 						/>
 						<span id="quantity-error" class="error">Informe a quantidade</span>
 					</div>
-					<button type="submit" id="submit" disabled>Comprar</button>
+					<button type="submit" id="submit" disabled>Continuar</button>
 				</form>
 			</div>
 		</main>

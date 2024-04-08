@@ -1,7 +1,3 @@
-h3.green {
-	color: var(--primary-green);
-}
-
 .card {
 	width: clamp(350px, 650px, 100%);
 }
@@ -11,12 +7,20 @@ h3.green {
 	flex-wrap: wrap;
 }
 
+.card form ul {
+	padding-left: 1rem;
+}
+
+#credit-card-container .field-container {
+	flex: 1;
+}
+
 #pix-container #copy-pix-key-button[disabled] {
 	filter: opacity(70%);
 }
 
-#pix-container small {
-	opacity: 0.5;
+.card form .field-container:has(> input[readonly]) {
+	display: none;
 }
 
 .card form button[type="submit"] {
