@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <title>Cadastro de Candidato</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1>Cadastro de candidatos</h1>
+        </div>
+        <form action="confirmacandidato.php" enctype="multipart/form-data" method="post">
+            <label for="txtNumero"><b>Número do candidato</b></label>
+            <input name="txtNumero" id="txtNumero" type="number" />
+
+            <label for="txtNome"><b>Nome do candidato</b></label>
+            <input name="txtNome" id="txtNome" type="text" />
+
+            <label for="foto"><b>Selecione uma foto</b></label>
+            <input name="foto" id="foto" type="file" />
+
+            <button type="submit" class="w3-btn w3-blue-grey">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
