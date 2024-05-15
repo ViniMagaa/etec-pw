@@ -1,0 +1,8 @@
+main .card .body {
+	gap: 1rem;
+	align-items: center;
+}
+
+main .card .body button {
+	width: 100%;
+}

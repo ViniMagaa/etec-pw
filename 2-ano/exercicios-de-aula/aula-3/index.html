@@ -1,31 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/styles/global.css" />
+		<script
+			src="https://kit.fontawesome.com/5a46ee37aa.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Cadastro de Candidato</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/global.css">
-    <title>Cadastro de Candidato</title>
-</head>
-
-<body>
-    <div>
-        <div>
-            <h1>Cadastro de candidatos</h1>
-        </div>
-        <form action="confirmacandidato.php" enctype="multipart/form-data" method="post">
-            <label for="txtNumero"><b>Número do candidato</b></label>
-            <input name="txtNumero" id="txtNumero" type="number" />
-
-            <label for="txtNome"><b>Nome do candidato</b></label>
-            <input name="txtNome" id="txtNome" type="text" />
-
-            <label for="foto"><b>Selecione uma foto</b></label>
-            <input name="foto" id="foto" type="file" />
-
-            <button type="submit" class="w3-btn w3-blue-grey">Enviar</button>
-        </form>
-    </div>
-</body>
-
+	<body>
+		<header>
+			<div>
+				<h1>Urna Eletrônica</h1>
+				<p>Sistema de votação online</p>
+			</div>
+			<img
+				src="./src/img/polivalente-logo.png"
+				alt="Polivalente"
+				class="logo"
+			/>
+		</header>
+		<main>
+			<aside>
+				<nav>
+					<img src="./src/img/logo.png" alt="Logo" class="logo" />
+					<menu>
+						<li>
+							<a href="./index.html" class="active">
+								<i class="fa-solid fa-clipboard-list"></i>
+								Cadastrar
+							</a>
+						</li>
+						<li>
+							<a href="./src/pages/candidatos.php">
+								<i class="fa-solid fa-users"></i>
+								Candidatos
+							</a>
+						</li>
+					</menu>
+				</nav>
+				<footer>
+					<p><strong>Vinícius e Pedro</strong></p>
+					<small>&copy; ETEC Polivalente 2024</small>
+				</footer>
+			</aside>
+			<div class="card-container">
+				<div class="card">
+					<div class="header">
+						<h2>Cadastro de candidatos</h2>
+					</div>
+					<form
+						action="./src/pages/confirmacandidato.php"
+						enctype="multipart/form-data"
+						method="post"
+						class="body"
+					>
+						<div class="form-field">
+							<label for="txtNumero">Número do candidato</label>
+							<input name="txtNumero" id="txtNumero" type="number" required />
+						</div>
+						<div class="form-field">
+							<label for="txtNome">Nome do candidato</label>
+							<input name="txtNome" id="txtNome" type="text" required />
+						</div>
+						<div class="form-field">
+							<label for="foto">Selecione uma foto</label>
+							<input name="foto" id="foto" type="file" required />
+						</div>
+						<button type="submit">Enviar</button>
+					</form>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
