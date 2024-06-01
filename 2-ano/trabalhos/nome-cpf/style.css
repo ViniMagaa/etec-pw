@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: rgb(29, 33, 45);
+	background-repeat: no-repeat;
+	font-family: "Arial", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.card {
+	background-color: rgb(37, 40, 55);
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.342) 0px 1rem 2.75rem;
+}
+
+.card form,
+.card form .form-field {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.card form input {
+	flex: 1;
+	color: white;
+	outline: none;
+	border: none;
+	padding: 0.8rem 1rem 0.8rem 2.5rem;
+	background-color: rgb(41, 48, 64);
+	border-radius: 0.5rem;
+}
+
+.card form .form-field {
+	position: relative;
+}
+
+.card form .form-field label {
+	color: rgb(66, 81, 103);
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	transform: translateY(-50%);
+}
+
+.card button {
+	padding: 0.5rem 1rem;
+	border: none;
+	outline: none;
+	border-radius: 0.5rem;
+	color: white;
+	font-weight: bold;
+	background-color: rgb(35, 181, 116);
+	transition: background-color 0.2s;
+}
+
+.card button:hover {
+	background-color: rgb(26, 139, 88);
+}
