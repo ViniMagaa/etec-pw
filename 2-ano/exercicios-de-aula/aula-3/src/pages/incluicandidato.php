@@ -24,15 +24,21 @@
 				<img src="../img/logo.png" alt="Logo" class="logo" />
 				<menu>
 					<li>
-						<a href="./index.html" class="active">
+						<a href="../../index.html">
 							<i class="fa-solid fa-clipboard-list"></i>
 							Cadastrar
 						</a>
 					</li>
 					<li>
-						<a href="../pages/candidatos.php">
+						<a href="./candidatos.php" class="active">
 							<i class="fa-solid fa-users"></i>
 							Candidatos
+						</a>
+					</li>
+					<li>
+						<a href="./votar.html">
+							<i class="fa-solid fa-pencil"></i>
+							Votar
 						</a>
 					</li>
 				</menu>

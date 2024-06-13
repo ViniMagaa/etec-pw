@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../styles/global.css">
+<link rel="stylesheet" href="../styles/incluircandidato.css">
+<script src="https://kit.fontawesome.com/5a46ee37aa.js" crossorigin="anonymous"></script>
+<title>Votar em um candidato</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>Urna Eletrônica</h1>
+      <p>Sistema de votação online</p>
+    </div>
+    <img src="../img/polivalente-logo.png" alt="Polivalente" class="logo" />
+  </header>
+  <main>
+    <aside>
+      <nav>
+        <img src="../img/logo.png" alt="Logo" class="logo" />
+        <menu>
+          <li>
+            <a href="../../index.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              Cadastrar
+            </a>
+          </li>
+          <li>
+            <a href="./candidatos.php">
+              <i class="fa-solid fa-users"></i>
+              Candidatos
+            </a>
+          </li>
+          <li>
+            <a href="./votar.html" class="active">
+              <i class="fa-solid fa-pencil"></i>
+              Votar
+            </a>
+          </li>
+        </menu>
+      </nav>
+      <footer>
+        <p><strong>Vinícius e Pedro</strong></p>
+        <small>&copy; ETEC Polivalente 2024</small>
+      </footer>
+    </aside>
+    <div class="card-container">
+      <div class="card">
+        <div class="header">
+          <h2>Votação</h2>
+        </div>
+        <form action="confirmavoto.php" method="post" class="body">
+          <div class="form-field">
+            <label for="numero">Número do candidato</label>
+            <input name="numero" id="numero" type="number" />
+          </div>
+          <button type="submit">Votar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

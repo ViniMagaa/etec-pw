@@ -43,6 +43,12 @@ move_uploaded_file($foto, $destino);
               Candidatos
             </a>
           </li>
+          <li>
+            <a href="./votar.html">
+              <i class="fa-solid fa-pencil"></i>
+              Votar
+            </a>
+          </li>
         </menu>
       </nav>
       <footer>
@@ -80,9 +86,9 @@ move_uploaded_file($foto, $destino);
 </body>
 
 <script>
-function cancelar() {
-  window.location = "../../index.html"
-}
+  function cancelar() {
+    window.location = "../../index.html"
+  }
 </script>
 
 </html>

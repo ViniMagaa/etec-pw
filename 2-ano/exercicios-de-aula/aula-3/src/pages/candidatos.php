@@ -35,6 +35,12 @@
               Candidatos
             </a>
           </li>
+          <li>
+            <a href="./votar.html">
+              <i class="fa-solid fa-pencil"></i>
+              Votar
+            </a>
+          </li>
         </menu>
       </nav>
       <footer>
@@ -64,11 +70,11 @@
           $numero = $dados['numero'];
           $nome = $dados['nome'];
         ?>
-        <div class="card">
-          <img src="<?php echo $foto; ?>" class="aspect-ratio">
-          <strong><?php echo $numero; ?></strong>
-          <small><?php echo $nome; ?></small>
-        </div>
+          <div class="card">
+            <img src="<?php echo $foto; ?>" class="aspect-ratio">
+            <strong><?php echo $numero; ?></strong>
+            <small><?php echo $nome; ?></small>
+          </div>
         <?php
         }
         ?>
