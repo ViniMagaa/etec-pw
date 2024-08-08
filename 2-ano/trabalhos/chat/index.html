@@ -32,23 +32,28 @@
 					<span class="username">User 3</span>
 				</div>
 			</section>
-			<section class="main-chat">
+			<section class="main-chat" id="main-chat">
 				<header>
 					<img src="./src/images/user.png" alt="User" class="user-picture" />
 					<span class="username">User 1</span>
 				</header>
-				<div class="messages">
-					<div class="message">
-						<span class="message-text">Hello, how are you today?</span>
-					</div>
-					<div class="message user">
-						<span class="message-text">I'm good, thank you!</span>
-					</div>
-					<div class="message user">
-						<span class="message-text">What about you?</span>
+				<div class="messages" id="messages">
+					<div class="messages-container" id="messages-container">
+						<div class="message">
+							<span>Hello, how are you today?</span>
+						</div>
+						<div class="message user">
+							<span>I'm good, thank you!</span>
+						</div>
+						<div class="message user">
+							<span>What about you?</span>
+						</div>
 					</div>
 				</div>
-				<form action="">
+				<button onclick="scrollBottom()" id="scroll">
+					<i class="fa-solid fa-arrow-down"></i>
+				</button>
+				<form id="new-message-form" action="">
 					<input
 						type="text"
 						id="new-message"
@@ -62,4 +67,46 @@
 			</section>
 		</main>
 	</body>
+
+	<script>
+		const form = document.getElementById("new-message-form");
+		const messages = document.getElementById("messages");
+		const messagesContainer = document.getElementById("messages-container");
+		const message = document.getElementById("new-message");
+		const scrollButton = document.getElementById("scroll");
+
+		function scrollBottom() {
+			messagesContainer.scrollTop = messagesContainer.scrollHeight;
+		}
+
+		function createMessage(text) {
+			const message = document.createElement("div");
+			message.innerText = text;
+			message.className = "message user";
+
+			return message;
+		}
+
+		messagesContainer.addEventListener("scroll", () => {
+			const isScrolledToBottom =
+				messagesContainer.scrollHeight - messagesContainer.scrollTop ===
+				messagesContainer.clientHeight;
+
+			scrollButton.style.display = isScrolledToBottom ? "none" : "flex";
+		});
+
+		form.addEventListener("submit", (event) => {
+			event.preventDefault();
+
+			if (message.value.trim() === "") return;
+
+			const newMessage = createMessage(message.value);
+			messagesContainer.appendChild(newMessage);
+
+			scrollBottom();
+
+			message.value = "";
+			message.focus();
+		});
+	</script>
 </html>

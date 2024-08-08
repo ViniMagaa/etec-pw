@@ -89,22 +89,17 @@ section {
 }
 
 .user-picture {
-	width: 35px;
-	height: 35px;
+	width: 2rem;
+	height: 2rem;
 }
 
 .main-chat {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
-	position: relative;
 }
 
 .main-chat header {
-	position: sticky;
-	top: 0;
-	left: 0;
-	z-index: 1;
 	padding: 0.5rem;
 	background-color: var(--light-gray);
 	display: flex;
@@ -119,17 +114,48 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	gap: 0.5rem;
+	overflow: auto;
+}
+
+.main-chat .messages-container {
+	scroll-behavior: smooth;
+	padding-top: 1rem;
+	overflow: auto;
 	position: relative;
+}
+
+button#scroll {
+	border: none;
+	outline: none;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	bottom: 3rem;
+	right: 1rem;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: var(--gray);
+	color: var(--white);
+	cursor: pointer;
+	box-shadow: 0 0 1.5rem var(--black);
+	transition: background-color 0.2s;
+}
+
+button#scroll:hover {
+	background-color: var(--light-gray);
 }
 
 .messages .message {
 	--message-color: var(--black);
 	width: fit-content;
 	padding: 0.5rem;
+	margin-bottom: 0.5rem;
 	background-color: var(--message-color);
 	border-radius: 0.5rem;
 	position: relative;
+	word-break: break-all;
 }
 
 .messages .message::after {
@@ -167,15 +193,12 @@ section {
 .main-chat form {
 	padding-top: 0.5rem;
 	background-color: var(--black);
-	position: sticky;
-	left: 0;
-	bottom: 0;
 	display: flex;
 	gap: 1rem;
 	box-shadow: 0 0 2rem var(--black);
 }
 
-input {
+form input {
 	flex: 1;
 	outline: none;
 	padding: 0.5rem 0.8rem;
@@ -186,18 +209,18 @@ input {
 	transition: background-color 0.2s;
 }
 
-input::placeholder {
+form input::placeholder {
 	color: #b4b4b4;
 }
 
-input:focus-within {
+form input:focus-within {
 	background-color: var(--gray);
 }
 
-button {
+form button {
 	border: none;
 	outline: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0.8rem;
 	background-color: var(--light-blue);
 	color: var(--white);
 	border-radius: 0.25rem;
@@ -205,6 +228,6 @@ button {
 	transition: background-color 0.2s;
 }
 
-button:hover {
+form button:hover {
 	background-color: var(--blue-gray);
 }
