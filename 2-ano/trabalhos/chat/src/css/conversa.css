@@ -1,0 +1,234 @@
+body {
+	width: 100%;
+	height: 100dvh;
+	background: linear-gradient(
+		to bottom left,
+		var(--light-blue),
+		var(--blue-gray),
+		var(--light-gray),
+		var(--gray),
+		var(--black)
+	);
+	color: var(--white);
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+main {
+	width: 100%;
+	max-width: 1200px;
+	max-height: 900px;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin: 3rem 1rem;
+	background-color: var(--black);
+	border-radius: 1rem;
+}
+
+section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.chats {
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 1rem;
+	overflow: auto;
+}
+
+.title {
+	position: sticky;
+	top: 0;
+	left: 0;
+	padding-block: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: var(--black);
+	border-bottom: 2px solid var(--light-gray);
+	box-shadow: 0 0 1.5rem var(--black);
+}
+
+.title img {
+	width: 40px;
+}
+
+.user-chat {
+	padding: 0.5rem;
+	background-color: var(--gray);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.user-chat:hover {
+	background-color: var(--light-gray);
+}
+
+.user-chat.active {
+	background-color: var(--blue-gray);
+}
+
+.user-chat .username {
+	font-size: 1.2rem;
+}
+
+.user-chat.active .username {
+	font-weight: bold;
+}
+
+.user-picture {
+	width: 2rem;
+	height: 2rem;
+}
+
+.main-chat {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-chat header {
+	padding: 0.5rem;
+	background-color: var(--light-gray);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 2rem var(--black);
+}
+
+.main-chat .messages {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	overflow: auto;
+}
+
+.main-chat .messages-container {
+	scroll-behavior: smooth;
+	padding-top: 1rem;
+	overflow: auto;
+	overflow-x: hidden;
+	position: relative;
+}
+
+button#scroll {
+	border: none;
+	outline: none;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	bottom: 3rem;
+	right: 1rem;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: var(--gray);
+	color: var(--white);
+	cursor: pointer;
+	box-shadow: 0 0 1.5rem var(--black);
+	transition: background-color 0.2s;
+}
+
+button#scroll:hover {
+	background-color: var(--light-gray);
+}
+
+.messages .message {
+	--message-color: var(--black);
+	width: fit-content;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	background-color: var(--message-color);
+	border-radius: 0.5rem;
+	position: relative;
+	word-break: break-all;
+}
+
+.messages .message::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 0.3rem solid transparent;
+	border-right: 0.3rem solid transparent;
+	border-top: 0.6rem solid var(--message-color);
+	position: absolute;
+	bottom: -0.3rem;
+}
+
+.messages .message:not(.user) {
+	--message-color: var(--blue-gray);
+	border-bottom-left-radius: 0;
+}
+
+.messages .message:not(.user)::after {
+	left: 0;
+	transform: rotate(-90deg);
+}
+
+.messages .message.user {
+	--message-color: var(--light-blue);
+	margin-left: auto;
+	border-bottom-right-radius: 0;
+}
+
+.messages .message.user::after {
+	right: 0;
+	transform: rotate(90deg);
+}
+
+.main-chat form {
+	padding-top: 0.5rem;
+	background-color: var(--black);
+	display: flex;
+	gap: 1rem;
+	box-shadow: 0 0 2rem var(--black);
+}
+
+form input {
+	flex: 1;
+	outline: none;
+	padding: 0.5rem 0.8rem;
+	background-color: var(--black);
+	border: 0.1rem solid var(--gray);
+	color: var(--white);
+	border-radius: 0.25rem;
+	transition: background-color 0.2s;
+}
+
+form input::placeholder {
+	color: #b4b4b4;
+}
+
+form input:focus-within {
+	background-color: var(--gray);
+}
+
+form button {
+	border: none;
+	outline: none;
+	padding: 0.5rem 0.8rem;
+	background-color: var(--light-blue);
+	color: var(--white);
+	border-radius: 0.25rem;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+form button:hover {
+	background-color: var(--blue-gray);
+}
