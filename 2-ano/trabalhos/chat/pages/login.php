@@ -6,7 +6,7 @@ $sql = "select * from usuarios where login = '$login' and senha = '$senha'";
 $result = mysqli_query($conexao, $sql);
 $linhas = mysqli_num_rows($result);
 if ($linhas <= 0) {
-  header("Location: error.html");
+  header("Location: erro.html");
 } else {
   session_start();
   $_SESSION["login"] = $login;

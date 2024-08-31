@@ -1,0 +1,10 @@
+body {
+	width: 100%;
+	height: 100dvh;
+	background: linear-gradient(to top right, var(--gray), var(--black));
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
