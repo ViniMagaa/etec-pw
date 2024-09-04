@@ -7,4 +7,4 @@ $result = mysqli_query($conexao, $sql);
 if (!$result) {
   die("Não foi possível incluir. Erro: " . mysqli_connect_error());
 }
-header("Location: ../index.html");
+header("Location: ../index.php");

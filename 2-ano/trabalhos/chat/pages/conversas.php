@@ -93,11 +93,21 @@
         <span class="usuario">
           Usuário: <?php echo $_SESSION["login"] ?>
         </span>
-        <div>
-          <button class="sair" onclick="sair()">
+        <div class="botoes">
+          <?php
+          $login = $_SESSION["login"];
+          if ($login == "vini") {
+          ?>
+          <button class="cinza" onclick="window.location.replace('usuarios.php')">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <?php
+          }
+          ?>
+          <button class="vermelho" onclick="sair()">
             Sair
           </button>
-          <button class="limpar" onclick="limpar()">
+          <button class="azul" onclick="limpar()">
             Limpar
           </button>
         </div>
@@ -105,13 +115,12 @@
 
       <?php
       require("conexao.php");
-      $login = $_SESSION["login"];
       $sql = "select * from usuarios order by login";
       $result = mysqli_query($conexao, $sql);
 
       while ($dados = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $nomeusuario = $dados["login"];
-        if ($nomeusuario != $_SESSION["login"]) {
+        if ($nomeusuario != $login) {
       ?>
       <label for=<?php echo $nomeusuario ?> class="user-chat">
         <img src="../src/images/user.png" alt="User" class="user-picture" />

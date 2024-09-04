@@ -68,8 +68,9 @@ section {
 	align-items: center;
 }
 
-.user-info button {
-	padding: 0.2rem 0.5rem;
+.user-info .botoes {
+	display: flex;
+	gap: 0.5rem;
 }
 
 .user-chat {
@@ -160,20 +161,14 @@ section {
 }
 
 button#scroll {
-	border: none;
-	outline: none;
 	width: 2rem;
 	height: 2rem;
 	position: absolute;
 	bottom: 4rem;
 	right: 1rem;
 	display: none;
-	justify-content: center;
-	align-items: center;
 	border-radius: 50%;
 	background-color: var(--gray);
-	color: var(--white);
-	cursor: pointer;
 	box-shadow: 0 0 1.5rem #181b2055;
 	transition: background-color 0.2s;
 }
@@ -279,18 +274,12 @@ input:focus {
 	background-color: var(--gray);
 }
 
-button {
-	border: none;
-	outline: none;
+button.enviar {
 	padding: 0.5rem 0.8rem;
 	background-color: var(--light-blue);
-	color: var(--white);
-	border-radius: 0.25rem;
-	cursor: pointer;
-	transition: background-color 0.2s;
 }
 
-button:hover {
+button.enviar:hover {
 	background-color: var(--blue-gray);
 }
 
