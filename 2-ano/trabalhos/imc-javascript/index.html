@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Calcule seu IMC!</title>
+	<link rel="stylesheet" href="src/styles/global.css" />
+	<link rel="stylesheet" href="src/styles/index.css" />
+	<script src="src/javascript/index.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="title">
+			<h1>Descubra seu IMC</h1>
+			<p>
+				Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo
+				e compare com os índices da tabela. Importante: siga os exemplos e use
+				pontos como separadores.
+			</p>
+		</div>
+	</header>
+
+	<main>
+		<form id="imc-form" class="card">
+			<h2>Insira seus dados abaixo</h2>
+
+			<div class="inputs-container">
+				<label for="name">
+					<p>Nome</p>
+					<input type="text" id="name" name="name" placeholder="Digite seu nome" oninput="onChangeName()" />
+					<span id="name-error" class="error"></span>
+				</label>
+
+				<label for="gender">
+					<p>Sexo <small>(gênero)</small></p>
+					<select name="gender" id="gender" oninput="onChangeGender()">
+						<option value="" selected disabled>Selecione uma opção</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Feminino">Feminino</option>
+						<option value="Outro">Outro</option>
+						<option value="Não informar">Não informar</option>
+					</select>
+					<span id="gender-error" class="error"></span>
+				</label>
+
+				<label for="height">
+					<p>Sua altura <small>(em metros)</small></p>
+					<input type="number" step="0.01" min="0" id="height" name="height" placeholder="Ex: 1,80"
+						oninput="onChangeHeight()" />
+					<span id="height-error" class="error"></span>
+				</label>
+
+				<label for="weight">
+					<p>Seu peso <small>(em quilos)</small></p>
+					<input type="number" step="0.1" min="0" id="weight" name="weight" placeholder="Ex: 75,4"
+						oninput="onChangeWeight()" />
+					<span id="weight-error" class="error"></span>
+				</label>
+			</div>
+
+			<div class="buttons-container">
+				<button type="button" class="secondary" onclick="handleClearForm()">
+					Limpar
+				</button>
+				<button type="submit" id="submit-button" disabled>Calcular</button>
+			</div>
+		</form>
+
+		<div id="result" class="card">
+			<div class="header">
+				<img src="./src/img/personal-trainer.svg" alt="Personal-Trainer">
+
+				<div class="title">
+					<strong>Seu IMC é</strong>
+					<h2 id="imc-number"></h2>
+				</div>
+
+				<img src="./src/img/workout.svg" alt="Exercícios">
+			</div>
+
+			<p id="recommendation" class="recommendation"></p>
+
+			<div class="information">
+				<div>
+					<p>
+						Sua classificação:
+						<strong id="classification"></strong>
+					</p>
+					<p>
+						Grau de obesidade:
+						<strong id="level-of-obesity"></strong>
+					</p>
+				</div>
+
+				<button id="button-toggle-table-visible" onclick="toggleTableVisible()">Ver mais</button>
+			</div>
+
+
+			<div class="table-container">
+				<table id="table" style="display: none;">
+					<thead>
+						<tr>
+							<th>IMC</th>
+							<th>Classificação</th>
+							<th>Obesidade (grau)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Menor que 18,5</td>
+							<td>Magreza</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Entre 18,5 e 24,9</td>
+							<td>Normal</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Entre 25,0 e 29,9</td>
+							<td>Sobrepeso</td>
+							<td>I</td>
+						</tr>
+						<tr>
+							<td>Entre 30,0 e 39,9</td>
+							<td>Obesidade</td>
+							<td>II</td>
+						</tr>
+						<tr>
+							<td>Maior que 40,0</td>
+							<td>Obesidade grave</td>
+							<td>III</td>
+						</tr>
+						</tb>
+				</table>
+			</div>
+
+			<a href="./index.html">Calcular novamente</a>
+		</div>
+	</main>
+
+	<footer>
+		<p>ETEC Polivalente &copy; 2024</p>
+	</footer>
+</body>
+
+</html>

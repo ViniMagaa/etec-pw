@@ -1,0 +1,187 @@
+header {
+  padding-top: clamp(2rem, 15vw, 5rem);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 0 10vw 10vw;
+  overflow: hidden;
+}
+
+header .title {
+  padding: 0 1rem;
+  max-width: 650px;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+
+main form {
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
+}
+
+main form .inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+main form .inputs-container label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+main form .inputs-container label p small {
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+
+main form .inputs-container label input,
+main form .inputs-container label select {
+  flex: 1;
+  outline: none;
+  border: 1px solid var(--gray);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.8rem;
+  transition: 0.15s outline;
+}
+
+main form .inputs-container label input:focus,
+main form .inputs-container label select:focus {
+  outline: 3px solid var(--light-blue);
+}
+
+main form .buttons-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+main .card .recommendation {
+  text-align: center;
+  color: var(--blue);
+  font-style: italic;
+  font-weight: 600;
+}
+
+main .card .information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .card .information #button-toggle-table-visible {
+  flex: 0 1 150px;
+}
+
+main .card .header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card .header .title {
+  text-align: center;
+}
+
+main .card .header .title h2 {
+  margin-top: -1.8rem;
+  font-size: clamp(4rem, 20vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: linear-gradient(
+    to bottom right,
+    var(--light-purple),
+    var(--purple),
+    var(--blue),
+    var(--blue)
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main .table-container {
+  width: 100%;
+  overflow: auto;
+}
+
+main table {
+  width: clamp(430px, 100%, 500px);
+  margin: auto;
+  border: 1px solid var(--gray);
+  border-collapse: collapse;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+main table tr:nth-child(odd) {
+  background-color: rgba(225, 255, 255, 0.7);
+}
+
+main table th,
+main table td {
+  padding: 0.2rem 0.5rem;
+}
+
+main table th {
+  color: var(--white);
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+}
+
+main table td {
+  border: 1px solid var(--gray);
+}
+
+main table tr td:last-child {
+  text-align: center;
+}
+
+main .card a {
+  text-decoration: none;
+  color: var(--blue);
+  margin: auto;
+}
+
+main .card a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--blue);
+  transition: width 0.2s ease;
+}
+
+main .card a:hover {
+  color: var(--purple);
+}
+
+main .card a:hover::after {
+  background-color: var(--purple);
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  main .card .header img:last-child {
+    display: none;
+  }
+}
