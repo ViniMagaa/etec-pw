@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Operações matemáticas</title>
+	</head>
+	<body>
+		<main>
+			<div>
+				<strong>Adição</strong>
+				<p id="adicao"></p>
+			</div>
+			<div>
+				<strong>Subtração</strong>
+				<p id="subtracao"></p>
+			</div>
+			<div>
+				<strong>Multiplicação</strong>
+				<p id="multiplicacao"></p>
+			</div>
+			<div>
+				<strong>Divisão</strong>
+				<p id="divisao"></p>
+			</div>
+		</main>
+	</body>
+
+	<script>
+		alert("Seja bem vindo a minha página.");
+		let mensagem = "Desenvolvedor: Vinícius";
+		let data = new Date();
+		let mensagem2 = "Data: " + data;
+		alert(`${mensagem}\n${mensagem2}`);
+
+		let n1 = 10;
+		let n2 = 20;
+		let soma = n1 + n2;
+		let subtracao = n1 - n2;
+		let multiplicacao = n1 * n2;
+		let divisao = n1 / n2;
+
+		document.getElementById("adicao").innerText = `Resultado da soma: ${soma}`;
+		document.getElementById(
+			"subtracao"
+		).innerText = `Resultado da subtração: ${subtracao}`;
+		document.getElementById(
+			"multiplicacao"
+		).innerText = `Resultado da multiplicação: ${multiplicacao}`;
+		document.getElementById(
+			"divisao"
+		).innerText = `Resultado da divisão: ${divisao}`;
+	</script>
+</html>
