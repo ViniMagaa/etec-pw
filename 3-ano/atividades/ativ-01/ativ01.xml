@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<array>
+	<clientes>
+		<cliente>
+			<nome>Vinicius</nome>
+			<sobrenome>Santos</sobrenome>
+			<endereco>Rua Ferdinando Mollon, 461</endereco>
+			<cidade>Santa Barbara d'Oeste</cidade>
+			<estado>SP</estado>
+			<telefone>(19) 98765-4321</telefone>
+		</cliente>
+
+		<cliente>
+			<nome>Isabela</nome>
+			<sobrenome>Pelogia</sobrenome>
+			<endereco>Rua Sao Jose, 456</endereco>
+			<cidade>Apucarana</cidade>
+			<estado>PR</estado>
+			<telefone>(21) 91234-5678</telefone>
+		</cliente>
+
+		<cliente>
+			<nome>Gabriel</nome>
+			<sobrenome>Pereira</sobrenome>
+			<endereco>Rua das Flores, 789</endereco>
+			<cidade>Pato Branco</cidade>
+			<estado>RS</estado>
+			<telefone>(31) 92345-6789</telefone>
+		</cliente>
+
+		<cliente>
+			<nome>Iolanda</nome>
+			<sobrenome>Coutinho</sobrenome>
+			<endereco>Rua do Chumbo, 101</endereco>
+			<cidade>Americana</cidade>
+			<estado>SP</estado>
+			<telefone>(19) 93456-7890</telefone>
+		</cliente>
+
+		<cliente>
+			<nome>Sofia</nome>
+			<sobrenome>Santino</sobrenome>
+			<endereco>Rua do Tancredo Neves, 202</endereco>
+			<cidade>Recife</cidade>
+			<estado>Pernambuco</estado>
+			<telefone>(51) 94567-8901</telefone>
+		</cliente>
+	</clientes>
+</array>

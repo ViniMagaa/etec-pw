@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<array>
+	<materia>
+		<aula>
+			<titulo>Vinicius</titulo>
+			<texto>99988-4455</texto>
+		</aula>
+		<aula>
+			<titulo>Isabelli</titulo>
+			<texto>97788-5566</texto>
+		</aula>
+		<aula>
+			<titulo>Gustavo</titulo>
+			<texto>97788-5577</texto>
+		</aula>
+		<aula>
+			<titulo>Nicolas</titulo>
+			<texto>97788-1166</texto>
+		</aula>
+	</materia>
+</array>
