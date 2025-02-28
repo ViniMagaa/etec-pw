@@ -1,0 +1,21 @@
+<?xml version="1.0" enconding="ISO-8859-1"?>
+<array>
+<materia>
+    <aula>
+        <titulo>Exemplo 1</titulo>
+        <texto>Assunto A</texto>
+    </aula>
+    <aula>
+        <titulo>Exemplo 2</titulo>
+        <texto>Assunto B</texto>
+    </aula>
+    <aula>
+        <titulo>Exemplo 3</titulo>
+        <texto>Assunto C</texto>
+    </aula>
+    <aula>
+        <titulo>Exemplo 4</titulo>
+        <texto>Estrutura de Repetição</texto>
+    </aula>
+</materia>
+</array>

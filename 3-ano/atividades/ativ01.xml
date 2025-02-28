@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cliente>
+    <nome>Vinícius</nome>
+    <sobrenome>Magalhães</sobrenome>
+    <endereco>Rua Ferdinando Mollon, 461</endereco>
+    <cidade>Santa Bárbara d'Oeste</cidade>
+    <estado>SP</estado>
+    <telefone>(19) 98326-1061</telefone>
+</cliente>
