@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<array>
+  <playlist genero="Ação">
+    <filme>
+      <titulo>Resistência</titulo>
+      <tipo>Filme</tipo>
+      <duracao>133 min</duracao>
+      <ano>2023</ano>
+      <diretor>Gareth Edwards</diretor>
+      <imagem>resistencia.jpg</imagem>
+    </filme>
+
+    <filme>
+      <titulo>John Wick 4: Baba Yaga</titulo>
+      <tipo>Filme</tipo>
+      <duracao>169 min</duracao>
+      <ano>2023</ano>
+      <diretor>Chad Stahelski</diretor>
+      <imagem>john_wick4.jpg</imagem>
+    </filme>
+
+    <filme>
+      <titulo>Missão: Impossível - Acerto de Contas Parte Um</titulo>
+      <tipo>Filme</tipo>
+      <duracao>163 min</duracao>
+      <ano>2023</ano>
+      <diretor>Christopher McQuarrie</diretor>
+      <imagem>missao_impossivel7.jpg</imagem>
+    </filme>
+
+    <filme>
+      <titulo>O Protetor: Capítulo Final</titulo>
+      <tipo>Filme</tipo>
+      <duracao>109 min</duracao>
+      <ano>2023</ano>
+      <diretor>Antoine Fuqua</diretor>
+      <imagem>o_protetor3.jpg</imagem>
+    </filme>
+
+    <filme>
+      <titulo>Besouro Azul</titulo>
+      <tipo>Filme</tipo>
+      <duracao>127 min</duracao>
+      <ano>2023</ano>
+      <diretor>Ángel Manuel Soto</diretor>
+      <imagem>besouro_azul.jpg</imagem>
+    </filme>
+  </playlist>
+</array>
