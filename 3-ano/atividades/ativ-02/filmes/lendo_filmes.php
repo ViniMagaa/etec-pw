@@ -21,12 +21,12 @@
     foreach ($xml->filme as $filme) {
     ?>
       <div>
-        <p><strong>Título:</strong> <?php echo utf8_decode($filme->titulo) ?></p>
-        <p><strong>Tipo:</strong> <?php echo utf8_decode($filme->tipo) ?></p>
-        <p><strong>Duração:</strong> <?php echo utf8_decode($filme->duracao) ?></p>
-        <p><strong>Ano:</strong> <?php echo utf8_decode($filme->ano) ?></p>
-        <p><strong>Diretor:</strong> <?php echo utf8_decode($filme->diretor) ?></p>
-        <p><img width="250px" src="imagens/<?php echo utf8_decode($filme->imagem) ?>" /></p>
+        <p><strong>Título:</strong> <?php echo mb_convert_encoding($filme->titulo, "UTF-8") ?></p>
+        <p><strong>Tipo:</strong> <?php echo mb_convert_encoding($filme->tipo, "UTF-8") ?></p>
+        <p><strong>Duração:</strong> <?php echo mb_convert_encoding($filme->duracao, "UTF-8") ?></p>
+        <p><strong>Ano:</strong> <?php echo mb_convert_encoding($filme->ano, "UTF-8") ?></p>
+        <p><strong>Diretor:</strong> <?php echo mb_convert_encoding($filme->diretor, "UTF-8") ?></p>
+        <p><img width="250px" src="imagens/<?php echo mb_convert_encoding($filme->imagem, "UTF-8") ?>" /></p>
       </div>
       <hr>
     <?php

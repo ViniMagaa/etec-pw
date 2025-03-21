@@ -21,13 +21,13 @@
     foreach ($xml->cliente as $cliente) {
     ?>
       <div>
-        <p><strong>Nome:</strong> <?php echo utf8_decode($cliente->nome) ?></p>
-        <p><strong>Sobrenome:</strong> <?php echo utf8_decode($cliente->sobrenome) ?></p>
-        <p><strong>Endereço:</strong> <?php echo utf8_decode($cliente->endereco) ?></p>
-        <p><strong>Cidade:</strong> <?php echo utf8_decode($cliente->cidade) ?></p>
-        <p><strong>Estado:</strong> <?php echo utf8_decode($cliente->estado) ?></p>
-        <p><strong>Telefone:</strong> <?php echo utf8_decode($cliente->telefone) ?></p>
-        <p><img width="250px" src="imagens/<?php echo utf8_decode($cliente->imagem) ?>" /></p>
+        <p><strong>Nome:</strong> <?php echo mb_convert_encoding($cliente->nome, "UTF-8") ?></p>
+        <p><strong>Sobrenome:</strong> <?php echo mb_convert_encoding($cliente->sobrenome, "UTF-8") ?></p>
+        <p><strong>Endereço:</strong> <?php echo mb_convert_encoding($cliente->endereco, "UTF-8") ?></p>
+        <p><strong>Cidade:</strong> <?php echo mb_convert_encoding($cliente->cidade, "UTF-8") ?></p>
+        <p><strong>Estado:</strong> <?php echo mb_convert_encoding($cliente->estado, "UTF-8") ?></p>
+        <p><strong>Telefone:</strong> <?php echo mb_convert_encoding($cliente->telefone, "UTF-8") ?></p>
+        <p><img width="250px" src="imagens/<?php echo mb_convert_encoding($cliente->imagem, "UTF-8") ?>" /></p>
       </div>
       <hr>
     <?php
